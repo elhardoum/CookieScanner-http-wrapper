@@ -1,0 +1,11 @@
+version: '3'
+services:
+  CookieScanner:
+    image: golang-cookiescanner
+    restart: always
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
